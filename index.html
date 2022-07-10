@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Crickbuzz</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+      /* Styles here */
+      body {
+        height: 100%;
+        background-color: #e3e6e3;
+        font-family: "Open Sans", sans-serif;
+      }
+
+      .container {
+        width: 980px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        height: 32px;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .nav {
+        height: 48px;
+        background-color: #009270;
+        display: flex;
+        align-items: center;
+      }
+
+      .navitem {
+        color: white;
+        display: flex;
+        padding-right: 5px;
+        padding-left: 5px;
+        font-size: 14px;
+        align-items: center;
+      }
+
+      .featured-matches {
+        height: 110px;
+        background-color: white;
+        margin-top: 10px;
+        padding: 15px;
+        padding-left: 20px;
+      }
+
+      .featured-match-heading {
+        color: #009270;
+        font-weight: 700;
+      }
+
+      .match {
+          margin-top: 10px;
+          font-size: 12px;
+          border-right: 1px solid rgb(218, 218, 218);
+          padding: 5px;
+      }
+
+      .mt10 {
+          margin-top: 10px;
+      }
+
+      .match-country {
+          font-weight: 700;
+          margin-right: 20px;
+      }
+
+      .featured-match-sub {
+          font-size: 10px;
+          color: #d0021b;
+          margin-top: 10px;
+      }
+      .featured-matches-score{
+        display: flex;
+        justify-content: space-between;
+
+      }
+      .content{
+        margin-top: 10px;
+        display:flex;
+      }
+      .latest-news{
+        width:196px;
+        background-color: white;
+      }
+      .latest-news-heading{
+        padding:10px;
+      }
+      .news-heading{
+        margin-left: 10px;
+      }
+      .one-latest-news{
+        padding:10px;
+        font-size:14px;
+      }
+      .latest-news-duration{
+        font-size: 12px;
+        color:rgb(143, 139, 139);
+      }
+      .main-news{
+        width:420px;
+        padding:10px;
+        background-color: white;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .featured-videos{
+        width:320px;
+        padding:10px;
+        background-color: white;
+      }
+      .news-tag{
+        font-size: 13px;
+        color:rgb(162, 162, 162);
+        margin-bottom: 10px;
+      }
+      .news-image{
+        border-radius: 5px;
+      }
+      .news-title{
+        font-weight: 700;
+        font-size: 22px;
+      }
+      .news-desc{
+        color:rgb(114, 114, 114);
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 20px;
+      }
+      .news-links{
+        color:#1866DB;
+        font-weight: 600;
+      }
+      .news-links-group{
+        margin-top: 10px;
+      }
+      #t20{
+        margin-left: 20px;
+        font-size: 15px;
+      }
+      .t20n{
+        margin-top: 10px;
+        background-color: white;
+      }
+      .t20m{
+        color: #1866DB;
+      }
+      #video{
+        margin-left:2px;
+        margin-bottom: 10px;
+      }
+      #caption{
+        margin-left:2px;
+        font-size: 15px;
+      }
+      .gray{
+        color: gray;
+      }
+      .white{
+        color:white;
+      }
+      .bg{
+        background-color: dimgrey;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- Navigation -->
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <img class="logo" src="https://www.cricbuzz.com/images/cb_logo.svg" />
+          <span class="navitem">Live Score</span>
+          <span class="navitem">Schedule</span>
+          <span class="navitem">Archives</span>
+          <span class="navitem"
+            >News<span class="material-icons"> arrow_drop_down </span>
+          </span>
+          <span class="navitem"
+            >Series<span class="material-icons"> arrow_drop_down </span>
+          </span>
+          <span class="navitem"
+            >Teams<span class="material-icons"> arrow_drop_down </span>
+          </span>
+          <span class="navitem"
+            >Videos<span class="material-icons"> arrow_drop_down </span>
+          </span>
+          <span class="navitem"
+            >Ranking<span class="material-icons"> arrow_drop_down </span>
+          </span>
+          <span class="navitem"
+            >More<span class="material-icons"> arrow_drop_down </span>
+          </span>
+        </nav>
+
+        <!-- Dark MATCHES section here -->
+        <nav class="nav t20n white bg">
+          <div id="t20" class="news-title ">
+            Matches
+          </div>
+          &nbsp;&nbsp;
+          <span class="navitem white">HBSW vs ADSW</span>
+          <span class="navitem white">BRHW vs SYSW</span>
+          <span class="navitem white">PAK vs AUS</span>
+          <span class="navitem white">ENG vs NZ</span>
+          <span class="navitem white">QL vs WA</span>
+        </nav>
+      </header>
+
+      <!-- Featured Matches -->
+      <div class="featured-matches">
+        <div class="featured-match-heading match-heading">FEATURED MATCHES</div>
+        <div class="featured-matches-score">
+          <!-- MATCH -->
+          <div class="match">
+            <div><span class="match-country">ADSW</span><span>142-4 (20)</span></div>
+            <div class="mt10 gray"><span class="match-country">HBSW</span><span>3-0 (1.2)</span></div>
+            <div class="featured-match-sub t20m">Adelaide Strikers Women won by 48 r....</div>
+          </div>
+          <div class="match">
+            <div><span class="match-country gray">SYSW</span><span class="gray">77-7 (18)</span></div>
+            <div class="mt10 "><span class="match-country">BRHW</span><span>3-0 (1.2)</span></div>
+            <div class="featured-match-sub">Brisban Heat Women opt to bowl </div>
+          </div>
+          <div class="match">
+            <div class="gray"><span class="match-country">PAK</span><span>178-4 (20)</span></div>
+            <div class="mt10"><span class="match-country">AUS</span><span>177-5 (19)</span></div>
+            <div class="featured-match-sub t20m">Australia won by 5 wkts</div>
+          </div>
+          <div class="match">
+            <div class="gray"><span class="match-country">ENG</span><span>166-4 (20)</span></div>
+            <div class="mt10"><span class="match-country">NZ</span><span>&nbsp;&nbsp;167-5 (19)</span></div>
+            <div class="featured-match-sub t20m">New Zealand won by 5 wkts</div>
+          </div>
+          
+        </div>
+      </div>
+      <!-- T20 WORLD CUP -->
+          <nav class="nav t20n">
+            <div id="t20" class="news-title">
+              T20 World Cup
+            </div>
+            &nbsp;&nbsp;
+            <span class="navitem t20m">Home</span>
+            <span class="navitem t20m">Schedule</span>
+            <span class="navitem t20m">Points Table</span>
+            <span class="navitem t20m">News</span>
+            <span class="navitem t20m">Videos</span>
+            <span class="navitem t20m">Squads</span>
+            <span class="navitem t20m">Wicket Zone</span>
+            <span class="navitem t20m">Boundary Tracker</span>
+          </nav>
+      <!-- main content -->
+      <div class="content">
+        <div class="latest-news latest-news-heading"><div class="featured-match-heading news-heading">LATEST NEWS</div>
+        <div class="one-latest-news">
+          <span>Bangladesh to play two tests in Newzealand in January 2022</span>
+          <div class="latest-news-duration">15h ago</div>
+        </div>
+        <hr>
+        <div class="one-latest-news">
+          <span>Bangladesh to play two tests in Newzealand in January 2022</span>
+          <div class="latest-news-duration">15h ago</div>
+        </div>
+        <hr>
+        <div class="one-latest-news">
+          <span>Bangladesh to play two tests in Newzealand in January 2022</span>
+          <div class="latest-news-duration">15h ago</div>
+        </div>
+        <hr>
+        <div class="one-latest-news">
+          <span>Bangladesh to play two tests in Newzealand in January 2022</span>
+          <div class="latest-news-duration">15h ago</div>
+        </div>
+        </div>
+        <div class="main-news">
+          <div class="one-main-news">
+            <div class="news-tag">T20 WORLD CUP 2021</div>
+            <div>
+              <img class="news-image" src="https://www.cricbuzz.com/a/img/v1/420x235/i1/c218084/matthew-wade-the-anti-heros.jpg">
+            </div>
+            <div class="news-title">
+              Matthew Wade, the anti-hero's hero
+            </div>
+            <div class="news-desc">
+              The semifinal against Pakistan was his much-deserved moment in the sun, after having spent some 12 months doing everything that was asked of him
+            </div>
+            <div class="news-links-group"><a class="news-links" href="">End of World Cup,start of new road for Pakistan</a></div>
+          </div>
+        </div>
+        <div class="featured-videos" class="latest-news latest-news-heading"><div id="video" class="featured-match-heading news-heading">FEATURED VIDEOS</div>
+          <div>
+            <img class="news-image" src="https://www.cricbuzz.com/a/img/v1/290x164/i1/c218051/zaheer-khan-ajay-jadeja-revi.jpg" width=300>
+          </div>
+          <div id="caption" class="news-title ">
+            Zaheer Khan & Ajay jadeja review Pakistan's T20 World Cup Campaign
+          </div>
+          <div class="latest-news-duration">1day ago</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
